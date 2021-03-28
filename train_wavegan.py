@@ -1,5 +1,4 @@
 from __future__ import print_function
-
 try:
   import cPickle as pickle
 except:
@@ -14,6 +13,9 @@ from six.moves import xrange
 
 import loader
 from wavegan import WaveGANGenerator, WaveGANDiscriminator
+import tensorflow as tf
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
 
 
 """
@@ -592,7 +594,7 @@ if __name__ == '__main__':
   parser.set_defaults(
     data_dir=None,
     data_sample_rate=16000,
-    data_slice_len=16384,
+    data_slice_len=40448,
     data_num_channels=1,
     data_overlap_ratio=0.,
     data_first_slice=False,
