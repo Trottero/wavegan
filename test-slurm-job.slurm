@@ -7,14 +7,14 @@
 
 # SBATCH --mail-user=wrlxs@hotmail.com
 # SBATCH --mail-type=ALL
-#SBATCH --output=%x_%j.out
-#SBATCH --error=%x_%j.err
+# SBATCH --output=%x_%j.out
+# SBATCH --error=%x_%j.err
 # SBATCH --job-name=tflowwavegan
 # SBATCH --partition=testing
 
 module load Miniconda3/4.7.10
-conda activate ~/data/api-env
+. ./conda activate ~/data/api-env
 
 cd ~/data/wavegan
 
-python test_tensorflow.py
+. ./python test_tensorflow.py
