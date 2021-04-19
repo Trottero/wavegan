@@ -49,7 +49,7 @@ def WaveGANGenerator(
     use_batchnorm=False,
     upsample='zeros',
     train=False):
-  assert slice_len in [16384, 32768, 65536]
+  assert slice_len in [16384, 40448, 32768, 65536]
   batch_size = tf.shape(z)[0]
 
   if use_batchnorm:
@@ -105,7 +105,7 @@ def WaveGANGenerator(
     with tf.variable_scope('upconv_4'):
       output = conv1d_transpose(output, nch, kernel_len, 4, upsample=upsample)
     output = tf.nn.tanh(output)
-  elif slice_len == 32768:
+  elif slice_len == 32768 or slice_len == 40448:
     # Layer 4
     # [4096, 128] -> [16384, 64]
     with tf.variable_scope('upconv_4'):
@@ -226,7 +226,7 @@ def WaveGANDiscriminator(
     output = batchnorm(output)
   output = lrelu(output)
 
-  if slice_len == 32768:
+  if slice_len == 32768 or slice_len == 40448:
     # Layer 5
     # [32, 1024] -> [16, 2048]
     with tf.variable_scope('downconv_5'):

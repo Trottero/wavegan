@@ -1,4 +1,3 @@
-*.sh
 *.pyc
 *.ipynb_checkpoints
 *.wav

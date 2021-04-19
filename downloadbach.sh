@@ -1,0 +1,1 @@
+wget -c http://deepyeti.ucsd.edu/cdonahue/wavegan/data/mancini_piano.tar.gz -O - | tar -xz
