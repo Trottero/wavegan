@@ -8,7 +8,6 @@
 
 SBATCH --mem=5G
 SBATCH --time=00:10:00
-SBATCH --partition=gpu-short
 SBATCH --ntasks=1
 SBATCH --gpus=1
 
@@ -21,4 +20,4 @@ SBATCH --partition=testing
 
 cd ~/data/wavegan
 
-python train_wavegan.py train ./train --data_dir ./dataset/dataset/train/
+python train_wavegan.py train ./train_output --data_dir ./techno --data_first_slice
