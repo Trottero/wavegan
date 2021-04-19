@@ -14,9 +14,12 @@
 
 module load Miniconda3/4.7.10
 echo "Loaded module"
-. ./conda activate ~/data/api-env
+conda init bash
+source ~/.bashrc
+echo "Initialized Conda"
+conda activate ~/data/api-env
 echo "Activated environment"
 
 cd ~/data/wavegan
 
-. ./python test_tensorflow.py
+python test_tensorflow.py
