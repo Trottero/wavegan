@@ -1,6 +1,7 @@
 *.pyc
 *.ipynb_checkpoints
-*.wav
+# *.wav
+piano
 *.tar.gz
 train
 web/ckpts
