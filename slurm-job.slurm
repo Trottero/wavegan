@@ -7,8 +7,8 @@
 
 # SBATCH --mail-user=wrlxs@hotmail.com
 # SBATCH --mail-type=ALL
-# SBATCH --output=output.log
-# SBATCH --error=error.log
+#SBATCH --output=%x_%j.out
+#SBATCH --error=%x_%j.err
 # SBATCH --job-name=tflowwavegan
 # SBATCH --partition=testing
 
