@@ -12,8 +12,8 @@
 # SBATCH --job-name=tflowwavegan
 # SBATCH --partition=gpu-short
 
-module load TensorFlow/1.13.1-fosscuda-2019a-Python-3.7.2
 module load Miniconda3/4.7.10
+module load TensorFlow/1.13.1-fosscuda-2019a-Python-3.7.2
 echo "Loaded module"
 
 conda init bash
