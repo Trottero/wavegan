@@ -594,7 +594,7 @@ if __name__ == '__main__':
   parser.set_defaults(
     data_dir=None,
     data_sample_rate=16000,
-    data_slice_len=40448,
+    data_slice_len=32768,
     data_num_channels=1,
     data_overlap_ratio=0.,
     data_first_slice=False,
