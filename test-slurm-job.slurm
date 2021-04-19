@@ -13,7 +13,9 @@
 # SBATCH --partition=testing
 
 module load Miniconda3/4.7.10
+echo "Loaded module"
 . ./conda activate ~/data/api-env
+echo "Activated environment"
 
 cd ~/data/wavegan
 
