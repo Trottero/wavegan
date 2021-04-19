@@ -10,7 +10,7 @@
 # SBATCH --output=%x_%j.out
 # SBATCH --error=%x_%j.err
 # SBATCH --job-name=tflowwavegan
-# SBATCH --partition=testing
+# SBATCH --partition=gpu-short
 
 module load Miniconda3/4.7.10
 echo "Loaded module"
