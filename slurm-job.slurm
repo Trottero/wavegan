@@ -18,6 +18,9 @@ SBATCH --error=error.log
 SBATCH --job-name=tflowwavegan
 SBATCH --partition=testing
 
+module load Miniconda3/4.7.10
+conda activate ~/data/api-env
+
 cd ~/data/wavegan
 
 python train_wavegan.py train ./train_output --data_dir ./techno --data_first_slice
