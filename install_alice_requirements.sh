@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~/data/
 
 # Load conda module
