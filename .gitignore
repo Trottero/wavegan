@@ -5,3 +5,4 @@ piano
 *.tar.gz
 train
 web/ckpts
+.idea

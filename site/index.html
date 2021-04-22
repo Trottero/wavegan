@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="css/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <title>Api - Audio Synthesis</title>
+</head>
+<body class="bg-gray-100">
+<div class="mx-auto max-w-2xl px-4">
+    <h1 class="mt-6 text-center font-bold text-2xl text-gray-700">
+        Audio Synthesis using
+        <br>
+        <span class="text-indigo-500">Generative adverserial networks</span>
+    </h1>
+    <p class="mt-4 font-small font-semibold text-gray-700">On this website we are presenting our progress for the 2021
+        course <span class="text-indigo-500">Audio Processing and indexing</span> for the Leiden Institute of Advanced
+        Computation</p>
+</div>
+<div class="mx-auto max-w-2xl px-4 mt-8">
+    <h2 class="font-bold text-xl text-gray-700">Latest news</h2>
+    <div class="mt-2">
+        <a href="#firstAudioSynthesis" class="block w-64 border-2 rounded-xl p-4 transform transition hover:border-gray-400">
+            <div class="flex items-center">
+                <span class="bg-gray-200 w-8 h-8 rounded-full text-center leading-8 text-gray-600">
+                    <i class="fa fa-play"></i>
+                </span>
+                <h3 class="pl-3 font-semibold">First audio synthesized</h3>
+            </div>
+            <p class="text-gray-700 mt-2">We started of with code from the original authors of the Audio Synthesis
+                paper.</p>
+            <p class="text-gray-500">04-20-2021</p>
+        </a>
+    </div>
+</div>
+
+<section class="mx-auto max-w-2xl px-4 mt-8 mb-8">
+    <h2 id="firstAudioSynthesis" class="font-bold text-xl text-gray-700">First audio synthesized</h2>
+    <p class="mt-4 text-gray-700">We started of with code from the original authors of the
+        Audio Synthesis paper.</p>
+    <p class="mt-4 text-gray-700">The author main focus was on a dataset with speaker
+        recordings of the digits 0 through 9 (SC09). Since our focus lays on the generation of music samples we first
+        tried the Generative Adverserial Network (GAN) on piano sounds.</p>
+    <p class="mt-4 text-gray-700">Here are some samples we genarated along the way:</p>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div class="p-2 flex flex-col justify-center">
+            <audio controls>
+                <source src="audio/individualAudio%20(1).wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 200 epochs</p>
+        </div>
+        <div class="p-2 flex flex-col justify-center">
+            <audio controls>
+                <source src="audio/individualAudio%20(4).wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 500 epochs</p>
+        </div>
+        <div class="p-2 flex flex-col justify-center">
+            <audio controls>
+                <source src="audio/individualAudio%20(5).wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 1000 epochs</p>
+        </div>
+    </div>
+    <p class="mt-4">In the future we hope to train the network on some audio recordings of techno music.</p>
+</section>
+</body>
+</html>
