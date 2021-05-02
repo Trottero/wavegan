@@ -17,10 +17,6 @@ import tensorflow as tf
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
 
-config = tf.ConfigProto()
-config.gpu_options.allow_growth=True
-sess = tf.Session(config=config)
-
 """
   Trains a WaveGAN
 """
@@ -203,10 +199,13 @@ def train(fps, args):
   D_train_op = D_opt.minimize(D_loss, var_list=D_vars)
 
   # Run training
+  config = tf.ConfigProto()
+  config.gpu_options.allow_growth = True
   with tf.train.MonitoredTrainingSession(
       checkpoint_dir=args.train_dir,
       save_checkpoint_secs=args.train_save_secs,
-      save_summaries_secs=args.train_summary_secs) as sess:
+      save_summaries_secs=args.train_summary_secs,
+      config=config) as sess:
     print('-' * 80)
     print('Training has started. Please use \'tensorboard --logdir={}\' to monitor.'.format(args.train_dir))
 
