@@ -17,6 +17,9 @@ import tensorflow as tf
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
 
+config = tf.ConfigProto()
+config.gpu_options.allow_growth=True
+sess = tf.Session(config=config)
 
 """
   Trains a WaveGAN
