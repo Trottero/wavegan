@@ -21,6 +21,14 @@ print(device_lib.list_local_devices())
 """
   Trains a WaveGAN
 """
+
+
+def time_left(script_start, time_to_run):
+  if time_to_run is None:
+    return True
+
+  return time.time() + time_to_run - script_start
+
 def train(fps, args):
   with tf.name_scope('loader'):
     x = loader.decode_extract_and_batch(
@@ -198,7 +206,8 @@ def train(fps, args):
       save_summaries_secs=args.train_summary_secs) as sess:
     print('-' * 80)
     print('Training has started. Please use \'tensorboard --logdir={}\' to monitor.'.format(args.train_dir))
-    while True:
+
+    while args.time_to_run is None or time_left(args.script_start, args.time_to_run) > 0:
       # Train discriminator
       for i in xrange(args.wavegan_disc_nupdates):
         sess.run(D_train_op)
@@ -590,6 +599,8 @@ if __name__ == '__main__':
       help='Number of generated examples to test')
   incept_args.add_argument('--incept_k', type=int,
       help='Number of groups to test')
+  incept_args.add_argument('--script-start', type=int, help='Start time of the script.')
+  incept_args.add_argument('--time-to-run', type=int, help='Time in ms to run the experiment')
 
   parser.set_defaults(
     data_dir=None,
@@ -619,7 +630,9 @@ if __name__ == '__main__':
     incept_metagraph_fp='./eval/inception/infer.meta',
     incept_ckpt_fp='./eval/inception/best_acc-103005',
     incept_n=5000,
-    incept_k=10)
+    incept_k=10,
+    time_to_run=None,
+    script_start=time.time())
 
   args = parser.parse_args()
 
