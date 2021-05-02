@@ -201,6 +201,7 @@ def train(fps, args):
   # Run training
   config = tf.ConfigProto()
   config.gpu_options.allow_growth = True
+  config.gpu_options.per_process_gpu_memory_fraction = 0.8
   with tf.train.MonitoredTrainingSession(
       checkpoint_dir=args.train_dir,
       save_checkpoint_secs=args.train_save_secs,
