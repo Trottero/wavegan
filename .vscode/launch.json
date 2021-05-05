@@ -18,10 +18,28 @@
       "program": "train_wavegan.py",
       "args": [
         "train",
-        "./train-techno-v2",
+        "./train-techno",
         "--data_dir",
-        "./techno-v2",
-        "--data_first_slice"
+        "./techno-120",
+        "--data_first_slice",
+        "--wavegan_dim",
+        "32"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Create inference models",
+      "type": "python",
+      "request": "launch",
+      "program": "train_wavegan.py",
+      "args": [
+        "infer",
+        "./train-techno",
+        "--data_dir",
+        "./techno-120",
+        "--data_first_slice",
+        "--wavegan_dim",
+        "32"
       ],
       "console": "integratedTerminal"
     }

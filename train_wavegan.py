@@ -6,6 +6,8 @@ except:
 from functools import reduce
 import os
 import time
+import glob
+import re
 
 import numpy as np
 import tensorflow as tf
@@ -27,6 +29,17 @@ def time_left(script_start, time_to_run):
     return True
 
   return time.time() + time_to_run - script_start
+
+def atoi(text):
+    return int(text) if text.isdigit() else text
+
+def natural_keys(text):
+    '''
+    alist.sort(key=natural_keys) sorts in human order
+    http://nedbatchelder.com/blog/200712/human_sorting.html
+    (See Toothy's implementation in the comments)
+    '''
+    return [ atoi(c) for c in re.split(r'(\d+)', text) ]
 
 def train(fps, args):
   with tf.name_scope('loader'):
@@ -200,8 +213,8 @@ def train(fps, args):
 
   # Run training
   config = tf.ConfigProto()
-  #config.gpu_options.allow_growth = True
-  config.gpu_options.per_process_gpu_memory_fraction = 0.1
+  # config.gpu_options.allow_growth = True
+  # config.gpu_options.per_process_gpu_memory_fraction = 0.1
   with tf.train.MonitoredTrainingSession(
       checkpoint_dir=args.train_dir,
       save_checkpoint_secs=args.train_save_secs,
