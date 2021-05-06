@@ -516,6 +516,12 @@ video {
   height: auto;
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
@@ -661,6 +667,10 @@ video {
   --tw-ring-shadow: 0 0 #0000;
 }
 
+.table-auto {
+  table-layout: auto;
+}
+
 .text-center {
   text-align: center;
 }
@@ -691,6 +701,10 @@ video {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .gap-2 {

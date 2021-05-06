@@ -6,3 +6,6 @@ piano
 train
 web/ckpts
 .idea
+docs/node_modules
+**/*/.DS_Store
+.DS_Store
