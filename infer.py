@@ -18,7 +18,7 @@ parser.add_argument('--checkpoint_name', '-c', type=str, required=True)
 
 # 'train-techno\infer\infer.meta'
 parser.add_argument('--infer_graph', '-ig', type=str, required=True)
-parser.add_argument('--samples', '-n', type=str, default=100)
+parser.add_argument('--samples', '-n', type=int, default=100)
 parser.add_argument('--human_friendly', type=bool, default=False)
 
 args = parser.parse_args()
