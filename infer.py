@@ -10,6 +10,9 @@ import tensorflow as tf
 print(tf.VERSION)
 
 parser = argparse.ArgumentParser()
+
+# Example usage
+# python infer.py -c train-techno\model.ckpt-72825 -ig train-techno\infer\infer.meta -n 100 --human_friendly True
 # 'train-techno\model.ckpt-72825'
 parser.add_argument('--checkpoint_name', '-c', type=str, required=True)
 
