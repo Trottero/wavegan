@@ -3,7 +3,6 @@
 # *.wav
 piano
 *.tar.gz
-train
 web/ckpts
 .idea
 docs/node_modules
