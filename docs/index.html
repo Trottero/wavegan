@@ -27,71 +27,216 @@
             Advanced
             Computation</p>
     </div>
-    <div class="mx-auto max-w-2xl px-4 mt-8">
-        <h2 class="font-bold text-xl text-gray-700">Latest news</h2>
-        <div class="mt-2 flex space-x-2">
-            <a href="#firstAudioSynthesis"
-                class="block w-64 border-2 rounded-xl p-4 transform transition hover:border-gray-400">
-                <div class="flex items-center">
-                    <span class="bg-gray-200 w-8 h-8 rounded-full text-center leading-8 text-gray-600">
-                        <i class="fa fa-play"></i>
-                    </span>
-                    <h3 class="pl-3 font-semibold">First audio synthesized</h3>
-                </div>
-                <p class="text-gray-700 mt-2">We started of with code from the original authors of the Audio Synthesis
-                    paper.</p>
-                <p class="text-gray-500">04-20-2021</p>
-            </a>
-            <a href="#firstTechno"
-                class="block w-64 border-2 rounded-xl p-4 transform transition hover:border-gray-400">
-                <div class="flex items-center">
-                    <span class="bg-gray-200 w-8 h-8 rounded-full text-center leading-8 text-gray-600">
-                        <i class="fa fa-play"></i>
-                    </span>
-                    <h3 class="pl-3 font-semibold">Techno music synthesized</h3>
-                </div>
-                <p class="text-gray-700 mt-2">The goal of our paper was to train a GAN with Techno music...</p>
-                <p class="text-gray-500">05-06-2021</p>
-            </a>
-        </div>
-    </div>
-
     <section class="mx-auto max-w-2xl px-4 mt-8 mb-8">
-        <h2 id="firstAudioSynthesis" class="font-bold text-xl text-gray-700">First audio synthesized</h2>
-        <p class="mt-4 text-gray-700">We started of with code from the original authors of the
-            Audio Synthesis paper.</p>
-        <p class="mt-4 text-gray-700">The author main focus was on a dataset with speaker
-            recordings of the digits 0 through 9 (SC09). Since our focus lays on the generation of music samples we
-            first
-            tried the Generative Adverserial Network (GAN) on piano sounds.</p>
-        <p class="mt-4 text-gray-700">Here are some samples we genarated along the way:</p>
+        <h2 id="firstTechno" class="font-bold text-xl text-gray-700">Project results (03-06-2021)</h2>
+        <p class="mt-4 text-gray-700">
+            These are the final samples for our project. We generated these by using the different model snapshots that
+            we recorded over a week of training. The snapshots were taken at 21k, 30k and 70k steps. Please note that
+            these are not the 'raw' outputs. Our dataset was slowed down (130 -> 120 bpm)
+            and these samples are sped up (120 -> 130bpm)
+        </p>
+        <h4 class="mt-4 font-bold">Training samples</h4>
         <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div class="p-2 flex flex-col justify-center">
                 <audio controls>
-                    <source src="audio/individualAudio%20(1).wav" type="audio/mpeg">
+                    <source src="audio/final/train/clip 4.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 200 epochs</p>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 1</p>
             </div>
             <div class="p-2 flex flex-col justify-center">
                 <audio controls>
-                    <source src="audio/individualAudio%20(4).wav" type="audio/mpeg">
+                    <source src="audio/final/train/clip 5.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 500 epochs</p>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 2</p>
             </div>
             <div class="p-2 flex flex-col justify-center">
                 <audio controls>
-                    <source src="audio/individualAudio%20(5).wav" type="audio/mpeg">
+                    <source src="audio/final/train/clip 7.wav" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 1000 epochs</p>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 3</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/train/clip 16.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 4</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/train/clip 19.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 5</p>
             </div>
         </div>
-        <p class="mt-4">In the future we hope to train the network on some audio recordings of techno music.</p>
+
+        <h4 class="mt-4 font-bold">Samples after 21k steps</h4>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/21k steps/clip 8.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 1</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/21k steps/clip 10.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 2</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/21k steps/clip 11.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 3</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/21k steps/clip 12.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 4</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/21k steps/clip 18.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 5</p>
+            </div>
+        </div>
+        <h4 class="mt-4 font-bold">Samples after 30k steps</h4>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/29k steps/clip 1.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 1</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/29k steps/clip 13.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 2</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/29k steps/clip 14.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 3</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/29k steps/clip 15.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 4</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/29k steps/clip 20.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 5</p>
+            </div>
+        </div>
+
+        <h4 class="mt-4 font-bold">Samples after 72k steps</h4>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/70k steps/clip 2.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 1</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/70k steps/clip 3.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 2</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/70k steps/clip 6.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 3</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/70k steps/clip 9.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 4</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/final/70k steps/clip 17.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">Sample 5</p>
+            </div>
+        </div>
+        <p class="mt-4 text-gray-700">
+            We also updated our similarity table to reflect our new data.
+        </p>
+        <table class="table-auto w-full">
+            <thead>
+                <tr>
+                    <td class="border px-4 py-2"></td>
+                    <td class="border px-4 py-2">Dself</td>
+                    <td class="border px-4 py-2">Dtrain</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">Train</td>
+                    <td class="border px-4 py-2">0</td>
+                    <td class="border px-4 py-2">1.07 +- 0.29</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Test</td>
+                    <td class="border px-4 py-2">1.07 +- 0.20</td>
+                    <td class="border px-4 py-2">1.07 +- 0.20</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">21k</td>
+                    <td class="border px-4 py-2">6.87 +- 0.12</td>
+                    <td class="border px-4 py-2">0.65 +- 0.77</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">29k</td>
+                    <td class="border px-4 py-2">6.87 +- 0.14</td>
+                    <td class="border px-4 py-2">0.65 +- 0.94</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">72k</td>
+                    <td class="border px-4 py-2">6.87 +- 0.14</td>
+                    <td class="border px-4 py-2">0.65 +- 0.10</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mt-4 text-gray-700">
+            Lastly, we surveyed a group of people. The survey can be found <b><a
+                    href="https://form.jotform.com/211523961291049">here</a></b>. Our results are presented in the table
+            below.
+        </p>
     </section>
     <section class="mx-auto max-w-2xl px-4 mt-8 mb-8">
-        <h2 id="firstTechno" class="font-bold text-xl text-gray-700">Techno music synthesized</h2>
+        <h2 id="firstTechno" class="font-bold text-xl text-gray-700">Techno music synthesized - Presentation
+            (06-05-2021)</h2>
         <p class="mt-4 text-gray-700">The goal of our paper was to train a GAN with Techno music, in order to acheave
             this
             we
@@ -129,31 +274,65 @@
             By comparing thease measures we can make an estimate of the diversity (Dself) and similarity (Dtrain)</p>
         <br>
         <table class="table-auto w-full">
-        <thead>
-        <tr>
-            <td class="border px-4 py-2"></td>
-            <td class="border px-4 py-2">Dself</td>
-            <td class="border px-4 py-2">Dtrain</td>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td class="border px-4 py-2">Train (real)</td>
-            <td class="border px-4 py-2">1.06 +- 0.29</td>
-            <td class="border px-4 py-2">0</td>
-        </tr>
-        <tr>
-            <td class="border px-4 py-2">Test (real)</td>
-            <td class="border px-4 py-2">1.08 +- 0.19</td>
-            <td class="border px-4 py-2">1.28 +- 0.23</td>
-        </tr>
-        <tr>
-            <td class="border px-4 py-2">Inference</td>
-            <td class="border px-4 py-2">0.83 +- 0.82</td>
-            <td class="border px-4 py-2">2.50 +- 0.12</td>
-        </tr>
-        </tbody>
-    </table>
+            <thead>
+                <tr>
+                    <td class="border px-4 py-2"></td>
+                    <td class="border px-4 py-2">Dself</td>
+                    <td class="border px-4 py-2">Dtrain</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border px-4 py-2">Train (real)</td>
+                    <td class="border px-4 py-2">1.06 +- 0.29</td>
+                    <td class="border px-4 py-2">0</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Test (real)</td>
+                    <td class="border px-4 py-2">1.08 +- 0.19</td>
+                    <td class="border px-4 py-2">1.28 +- 0.23</td>
+                </tr>
+                <tr>
+                    <td class="border px-4 py-2">Inference</td>
+                    <td class="border px-4 py-2">0.83 +- 0.82</td>
+                    <td class="border px-4 py-2">2.50 +- 0.12</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="mx-auto max-w-2xl px-4 mt-8 mb-8">
+        <h2 id="firstAudioSynthesis" class="font-bold text-xl text-gray-700">First audio synthesized (22-04-2021)</h2>
+        <p class="mt-4 text-gray-700">We started of with code from the original authors of the
+            Audio Synthesis paper.</p>
+        <p class="mt-4 text-gray-700">The author main focus was on a dataset with speaker
+            recordings of the digits 0 through 9 (SC09). Since our focus lays on the generation of music samples we
+            first
+            tried the Generative Adverserial Network (GAN) on piano sounds.</p>
+        <p class="mt-4 text-gray-700">Here are some samples we genarated along the way:</p>
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/individualAudio%20(1).wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 200 epochs</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/individualAudio%20(4).wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 500 epochs</p>
+            </div>
+            <div class="p-2 flex flex-col justify-center">
+                <audio controls>
+                    <source src="audio/individualAudio%20(5).wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="text-gray-700 sm:text-center text-sm font-bold">audio after 1000 epochs</p>
+            </div>
+        </div>
+        <p class="mt-4">In the future we hope to train the network on some audio recordings of techno music.</p>
     </section>
 </body>
 
